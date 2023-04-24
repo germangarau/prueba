@@ -1,0 +1,12 @@
+#!/bin/bash
+read -p "introdueix X: " X
+
+if [[ ${X} -lt 5 ]]
+then
+    echo "has introduit un numero menor que 5"
+elif [[ ${X} -gt 5 ]]
+then 
+    echo "has introduit un numero major que 5"
+else
+    echo "has introduit un 5"
+fi
