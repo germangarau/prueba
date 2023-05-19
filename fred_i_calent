@@ -1,0 +1,32 @@
+#!/bin/bash
+
+adivina=$(( ( RANDOM % 10 )  + 1 ))
+
+########################################################
+# Escriu el teu codi aqui
+########################################################
+Vides=3
+while [[ ${Vides} -gt 0 ]]
+do
+    read -p "Introdueix un numero: " introduit
+    if [[ ${introduit} -lt ${adivina} ]]
+    then
+        echo "fred"
+        exit 0
+    elif [[ ${introduit} -gt ${adivina} ]]
+    then
+        echo "calent"
+
+    elif [[ ${introduit} -eq ${adivina} ]]
+    then
+        echo "eureka"
+    fi
+    Vides=$Vides-1
+    
+done
+
+########################################################
+# Fi del teu codi
+########################################################
+
+echo "El nombre que havies d'adivinar era: ${adivina}"
